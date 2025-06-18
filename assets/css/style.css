@@ -369,13 +369,14 @@ header nav {
 
     /* hero */
     .hero-content {
-        padding: 30px 30px 0px ;
+        padding: 50px 30px  30px;
+        height: auto;
     }
 
     .hero-flex{
         flex-wrap: wrap;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 20px;
     }
 
@@ -396,12 +397,6 @@ header nav {
     .hero-flex .hero-text p{
         font-size: 14px;
     }
-
-    .hero-flex .hero-img{
-        width: 300px;
-        height: 300px;
-    }
-
 }
 
 @media (max-width: 580px) {
@@ -415,12 +410,16 @@ header nav {
 
     /* hero */
     .hero-content{
-        padding: 20px 30px;
-        height: auto;
+        
     }
 
     .hero-flex{
         flex-wrap: wrap-reverse;
+    }
+
+    .hero-flex .hero-img{
+        width: 300px;
+        height: 300px;
     }
 
     .hero-flex .hero-text h2{
