@@ -1168,12 +1168,10 @@ header nav {
 
 .input-error {
     border-color: #e74c3c !important;
-    /* background-color: #fdf2f2; */
 }
 
 .input-valid {
     border-color: #27ae60 !important;
-    /* background-color: #f8fff8; */
 }
 
 .char-count {
@@ -1234,26 +1232,27 @@ header nav {
         padding: 20px;
     }
 
-    .contact-section form div{
+    .contact-section {
         flex-direction: column;
         margin-bottom: 20px;
         gap: 20px;
     }
 
-    .contact-section form div input{
-        width: 100%;    
-        font-size: 14px;
+    .input-group{
+        margin-bottom: 30px;
     }
 
-    .contact-section form input.subject{
-        margin-bottom: 20px;
-        font-size: 14px;
+    .input-row {
+        flex-wrap: wrap;
     }
 
-    .contact-section form textarea{
-        font-size: 14px;
+    .input-group .input-group-col{
+        width: 100%;
     }
 
+    .input-group .input-group-col:first-child{
+        margin-bottom: 30px;
+    }
 }
 
 /* footer */
