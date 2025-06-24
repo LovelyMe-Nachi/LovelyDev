@@ -158,8 +158,9 @@ header .header-logo .header-logo-dot{
 }
 
 header nav ul {
+    width: 100%;
     display: flex;
-    gap: 60px;
+    gap: 40px;
     align-items: center;
 }
 
@@ -196,6 +197,7 @@ nav ul li a:hover::after, nav ul li a.active-link::after{
 
 header nav .small-screen-header-btn{
     display: none;
+    text-align: center;
 }
 
 .header-btn{
@@ -204,6 +206,8 @@ header nav .small-screen-header-btn{
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 1;
+    padding: 10px ;
     height: 40px;
     width: 180px;
     font-weight: 600;
@@ -249,10 +253,6 @@ header nav .small-screen-header-btn{
 .nav-overlay.active {
     opacity: 1;
     visibility: visible;
-}
-
-header nav {
-    transition: width 0.3s ease;
 }
 
 /* hero */
@@ -326,6 +326,7 @@ header nav {
         z-index: 999;
         overflow-x: hidden;
         padding-top: 60px;
+        transition: width 0.3s ease;
     }
 
     header nav ul {
@@ -342,7 +343,7 @@ header nav {
     }
 
     header nav .small-screen-header-btn{
-        display: flex;
+        display: block;
         margin: 40px auto 0 auto;
     }
 
@@ -409,10 +410,6 @@ header nav {
     }
 
     /* hero */
-    .hero-content{
-        
-    }
-
     .hero-flex{
         flex-wrap: wrap-reverse;
     }
@@ -617,9 +614,10 @@ header nav {
 .skills-row{
     margin-top: 40px;
     width: 100%;
-    height: 50px;
+    height: auto;
+    padding: 10px;
     display: flex;
-    gap: 70px;
+    gap: 40px;
     align-items: center;
     width: calc(250px * 8);
     animation: slide 100s linear infinite;
@@ -643,7 +641,7 @@ header nav {
     perspective: 100px;
     text-align: center;
     border-radius: 8px;
-    padding: 10px;
+    padding: 10px; 
     display: block;
 }
 
@@ -657,7 +655,7 @@ header nav {
 }
 
 
-@media (max-width: 780px) {
+@media (max-width: 900px) {
     .skills{
         width: 90%;
         margin: 70px auto 30px auto;

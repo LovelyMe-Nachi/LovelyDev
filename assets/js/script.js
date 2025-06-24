@@ -123,7 +123,22 @@ overlay.addEventListener("click", closeMenu);
 // Close menu when clicking nav links on mobile
 const mobileNavLinks = headerNav.querySelectorAll('a');
 mobileNavLinks.forEach(link => {
-    link.addEventListener('click', closeMenu);
+    link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 800 && headerNav.style.width !== "0px") {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            closeMenu();
+            setTimeout(() => {
+                // Scroll to anchor after menu closes
+                if (href.startsWith('#')) {
+                    const target = document.querySelector(href);
+                    if (target) target.scrollIntoView({behavior: "smooth"});
+                } else {
+                    window.location.href = href;
+                }
+            }, 350); // Match your nav transition duration
+        }
+    });
 });
 
 
